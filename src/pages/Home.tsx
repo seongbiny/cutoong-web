@@ -1,14 +1,13 @@
 import styled from "styled-components";
 import SigninButton from "../components/SigninButton";
 import Layout from "./Layout";
+import Slider from "../components/Slider";
 
 export default function Home() {
   return (
     <Layout>
       <Container>
-        <div>
-          <div>따로 또 같이 쓰는 가계부</div>
-        </div>
+        <Slider />
         <ButtonContainer>
           <SigninButton
             bgColor="#fae300"
@@ -35,10 +34,12 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 100vh;
 `;
 
 const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 13px 0;
+  margin-bottom: 80px;
 `;

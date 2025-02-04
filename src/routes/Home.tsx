@@ -2,18 +2,24 @@ import styled from "styled-components";
 import SigninButton from "../components/SigninButton";
 import Layout from "./Layout";
 import Slider from "../components/Slider";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
+  const navigate = useNavigate();
+
   return (
     <Layout>
       <Container>
         <Slider />
         <ButtonContainer>
-          <SigninButton
-            bgColor="#fae300"
-            imgSrc="./src/assets/KakaoLogo.png"
-            text="카카오로 시작하기"
-          />
+          <div onClick={() => navigate("/nickname")}>
+            <SigninButton
+              bgColor="#fae300"
+              imgSrc="./src/assets/KakaoLogo.png"
+              text="카카오로 시작하기"
+            />
+          </div>
+
           <SigninButton
             bgColor="#1ec800"
             imgSrc="./src/assets/NaverLogo.png"

@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router";
 import "./App.css";
-import Home from "./pages/Home";
-import Nickname from "./pages/Nickname";
+import Home from "./routes/Home";
+import Nickname from "./routes/Nickname";
 
 function App() {
   return (
